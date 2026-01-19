@@ -48,7 +48,7 @@ async function allPosts(url) {
 
                 // Create link to post details page
                 link.innerHTML = 'Read';
-                link.setAttribute('href', `/posts.html?id=${post.id}`);
+                link.setAttribute('href', `posts.html?id=${post.id}`);
 
                 // Assemble card structure
                 card.appendChild(title);
