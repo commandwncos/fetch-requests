@@ -131,6 +131,8 @@ commentForm.addEventListener('submit', (event) => {
 
     // Send comment and append it to the list
     postComment(comment, Id, commentsContainer);
+    emailInputForm.value = '';
+    commentTextAreaForm.value = '';
 });
 
 /**
