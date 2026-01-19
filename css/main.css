@@ -1,0 +1,176 @@
+/* =========================
+   RESET
+========================= */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* =========================
+   BASE / FUNDO
+========================= */
+body {
+    min-height: 100vh;
+    font-family: -apple-system, BlinkMacSystemFont, "San Francisco",
+                 "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    background: radial-gradient(
+        circle at top,
+        #1c1c1e 0%,
+        #0f0f10 45%,
+        #000000 100%
+    );
+    color: #f5f5f7;
+    padding: 40px 32px;
+}
+
+/* =========================
+   PAGE TITLE
+========================= */
+h1 {
+    font-size: clamp(3rem, 6vw, 4.5rem);
+    font-weight: 700;
+    letter-spacing: -0.03em;
+    margin-bottom: 32px;
+    text-align: center;
+    background: linear-gradient(180deg, #ffffff, #b5b5b7);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+/* =========================
+   LOADING
+========================= */
+#ephemeral {
+    text-align: center;
+    font-size: 1.2rem;
+    color: #a1a1a6;
+    margin-bottom: 40px;
+}
+
+.hidden {
+    display: none;
+}
+
+/* =========================
+   GRID CONTAINER
+========================= */
+#container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 24px;
+}
+
+/* =========================
+   CARD (POST PREVIEW)
+========================= */
+.card {
+    background: linear-gradient(
+        180deg,
+        rgba(255, 255, 255, 0.08),
+        rgba(255, 255, 255, 0.02)
+    );
+    border-radius: 20px;
+    padding: 24px;
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    box-shadow:
+        0 20px 40px rgba(0, 0, 0, 0.6),
+        inset 0 1px 0 rgba(255, 255, 255, 0.15);
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    transition:
+        transform 0.35s cubic-bezier(0.16, 1, 0.3, 1),
+        box-shadow 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+/* =========================
+   CARD HOVER
+========================= */
+.card:hover {
+    transform: translateY(-6px) scale(1.01);
+    box-shadow:
+        0 30px 60px rgba(0, 0, 0, 0.8),
+        inset 0 1px 0 rgba(255, 255, 255, 0.2);
+}
+
+/* =========================
+   CARD TITLE
+========================= */
+.card h2 {
+    font-size: 1.25rem;
+    font-weight: 600;
+    letter-spacing: -0.02em;
+    margin-bottom: 12px;
+    color: #ffffff;
+}
+
+/* =========================
+   CARD TEXT
+========================= */
+.card p {
+    font-size: 0.95rem;
+    line-height: 1.6;
+    color: #d1d1d6;
+    margin-bottom: 20px;
+}
+
+/* =========================
+   CARD LINK
+========================= */
+.card a {
+    text-decoration: none;
+    font-size: 0.95rem;
+    font-weight: 500;
+    color: #0a84ff;
+    align-self: flex-start;
+    position: relative;
+}
+
+/* =========================
+   LINK UNDERLINE ANIMATION
+========================= */
+.card a::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -4px;
+    width: 0;
+    height: 2px;
+    background: #0a84ff;
+    transition: width 0.3s ease;
+}
+
+.card a:hover::after {
+    width: 100%;
+}
+
+/* =========================
+   RESPONSIVE
+========================= */
+@media (max-width: 768px) {
+    body {
+        padding: 32px 20px;
+    }
+
+    #container {
+        gap: 20px;
+    }
+}
+
+@media (max-width: 480px) {
+    h1 {
+        font-size: 2.5rem;
+        margin-bottom: 24px;
+    }
+
+    .card {
+        padding: 20px;
+    }
+}

@@ -1,0 +1,229 @@
+/* =========================
+   PAGE
+========================= */
+.page {
+    min-height: 100vh;
+    padding: 40px 24px;
+}
+
+.page-post {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* =========================
+   TITLE
+========================= */
+.page-title {
+    font-size: clamp(3rem, 6vw, 4.5rem);
+    font-weight: 700;
+    letter-spacing: -0.03em;
+    margin-bottom: 32px;
+    text-align: center;
+    background: linear-gradient(180deg, #ffffff, #b5b5b7);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+/* =========================
+   LOADING
+========================= */
+.loading-message {
+    font-size: 1.2rem;
+    color: #a1a1a6;
+    margin-bottom: 40px;
+}
+
+.hidden {
+    display: none;
+}
+
+/* =========================
+   POST CARD
+========================= */
+.post {
+    width: 100%;
+    max-width: 900px;
+    padding: 32px;
+    background: linear-gradient(180deg,
+            rgba(255, 255, 255, 0.08),
+            rgba(255, 255, 255, 0.02));
+    border-radius: 28px;
+    backdrop-filter: blur(18px);
+    -webkit-backdrop-filter: blur(18px);
+    box-shadow:
+        0 30px 60px rgba(0, 0, 0, 0.7),
+        inset 0 1px 0 rgba(255, 255, 255, 0.12);
+    border: 1px solid rgba(255, 255, 255, 0.12);
+}
+
+/* =========================
+   POST CONTENT
+========================= */
+.post__content {
+    margin-bottom: 40px;
+}
+
+.post__content h2 {
+    font-size: 2rem;
+    font-weight: 600;
+    letter-spacing: -0.02em;
+    margin-bottom: 16px;
+    color: #ffffff;
+}
+
+.post__content p {
+    font-size: 1.05rem;
+    line-height: 1.7;
+    color: #d1d1d6;
+}
+
+/* =========================
+   COMMENTS TITLE
+========================= */
+.post__comments-title {
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin-bottom: 20px;
+}
+
+/* =========================
+   COMMENT FORM
+========================= */
+.comment-form {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    margin-bottom: 32px;
+}
+
+.comment-form__field {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.comment-form__label {
+    font-size: 0.85rem;
+    color: #a1a1a6;
+}
+
+.comment-form__input,
+.comment-form__textarea {
+    padding: 12px 14px;
+    border-radius: 12px;
+    background: rgba(255, 255, 255, 0.08);
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    color: #f5f5f7;
+    font-size: 0.95rem;
+    outline: none;
+    resize: none;
+}
+
+.comment-form__input::placeholder,
+.comment-form__textarea::placeholder {
+    color: #8e8e93;
+}
+
+.comment-form__input:focus,
+.comment-form__textarea:focus {
+    border-color: #0a84ff;
+    box-shadow: 0 0 0 2px rgba(10, 132, 255, 0.3);
+}
+
+/* =========================
+   SUBMIT BUTTON
+========================= */
+.comment-form__submit {
+    align-self: flex-start;
+    margin-top: 8px;
+    padding: 12px 26px;
+    border-radius: 999px;
+    background: #0a84ff;
+    color: #ffffff;
+    border: none;
+    font-weight: 600;
+    cursor: pointer;
+    transition:
+        transform 0.2s ease,
+        box-shadow 0.2s ease;
+}
+
+.comment-form__submit:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 10px 25px rgba(10, 132, 255, 0.5);
+}
+
+/* =========================
+   BACK BUTTON
+========================= */
+.button-back {
+    display: inline-block;
+    margin: 8px 0 40px;
+    color: #0a84ff;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.button-back:hover {
+    text-decoration: underline;
+}
+
+/* =========================
+   COMMENTS LIST
+========================= */
+.comments {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+
+    padding: 16px 20px;
+    border-radius: 16px;
+
+    background: rgba(255, 255, 255, 0.06);
+    border: 1px solid rgba(255, 255, 255, 0.12);
+
+    box-shadow:
+        inset 0 1px 0 rgba(255, 255, 255, 0.15);
+}
+
+/* Email / autor */
+.comments h3 {
+    font-size: 0.85rem;
+    font-weight: 500;
+    color: #0a84ff;
+    letter-spacing: 0.01em;
+}
+
+/* Texto do comentário */
+.comments p {
+    font-size: 0.95rem;
+    line-height: 1.6;
+    color: #d1d1d6;
+}
+
+
+/* =========================
+   COMMENT CARD
+========================= */
+.comment {
+    padding: 16px 20px;
+    border-radius: 16px;
+    background: rgba(255, 255, 255, 0.06);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.1);
+}
+
+.comment__email {
+    display: block;
+    font-size: 0.8rem;
+    color: #0a84ff;
+    margin-bottom: 6px;
+}
+
+.comment p {
+    font-size: 0.95rem;
+    line-height: 1.6;
+    color: #d1d1d6;
+}

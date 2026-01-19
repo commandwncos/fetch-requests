@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/posts.css">
+    <script src="./scripts/posts.js" defer></script>
+    <title>Post</title>
+</head>
+
+<body class="page page-post">
+
+    <h1 class="page-title">The Post</h1>
+
+    <p id="ephemeral" class="loading-message">
+        Loading...
+    </p>
+
+    <div id="post" class="post hidden">
+        <!-- BACK BUTTON -->
+        <a href="main.html" class="button-back">
+            back
+        </a>
+
+        <!-- POST CONTENT -->
+        <div id="post-container" class="post__content">
+            <!-- title + body injected via JS -->
+        </div>
+
+        <!-- COMMENTS TITLE -->
+        <h2 class="post__comments-title">
+            Comments:
+        </h2>
+
+        <!-- COMMENT FORM -->
+        <form id="comment-form" class="comment-form">
+
+            <div class="comment-form__field">
+                <label for="email" class="comment-form__label">
+                    Email:
+                </label>
+                <input type="email" name="email" id="email" class="comment-form__input" placeholder="type your email..."
+                    required>
+            </div>
+
+            <div class="comment-form__field">
+                <label for="comment" class="comment-form__label">
+                    Comment:
+                </label>
+                <textarea name="comment" id="comment" class="comment-form__textarea" placeholder="type your comment..."
+                    rows="2" required></textarea>
+            </div>
+
+            <input type="submit" value="Send" class="comment-form__submit">
+        </form>
+
+
+
+        <!-- COMMENTS LIST -->
+        <div id="comments-container" class="comments">
+            <!-- comments injected via JS -->
+        </div>
+
+    </div>
+
+</body>
+
+</html>
